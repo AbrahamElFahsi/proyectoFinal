@@ -29,8 +29,8 @@ function consultaUsuario($conexion,$usuario){
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
-function consultaUsuarioId($conexion,$usuario){
-    $consulta = "Select * from Usuario WHERE  idUsuario = '$usuario'";
+function consultaUsuarioId($conexion,$idusuario){
+    $consulta = "Select * from Usuario WHERE  idUsuario = '$idusuario'";
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }

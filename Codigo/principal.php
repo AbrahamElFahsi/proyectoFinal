@@ -1,4 +1,4 @@
-php<?php
+<?php
 require 'BD/ConectorBD.php';
 require 'BD/DAOUsuario.php';
 require 'BD/DAOProducto.php';
