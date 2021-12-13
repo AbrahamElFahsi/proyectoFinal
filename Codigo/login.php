@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
     <link rel="stylesheet" href="css/style.css">
     <?php include 'nav.php';
-            require 'BD/ConectorBD.php';
+            require 'ConectorBD.php';
             require 'BD/DAOUsuario.php'; 
             $conexion=conectar(false); ?>
     <link rel="stylesheet" href="css/style.css">

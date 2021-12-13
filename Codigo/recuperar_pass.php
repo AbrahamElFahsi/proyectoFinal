@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <?php 
         include 'nav.php';
-        require 'BD/ConectorBD.php';
+        require 'ConectorBD.php';
         require 'BD/DAOUsuario.php'; 
          
         $conexion=conectar(false);

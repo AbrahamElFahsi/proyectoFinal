@@ -1,5 +1,5 @@
 <?php
-require 'BD/ConectorBD.PHP';
+require 'ConectorBD.PHP';
 require 'BD/DAOUsuario.PHP';
 require 'BD/DAOProducto.PHP';
 require 'BD/DAOSeccion.PHP';

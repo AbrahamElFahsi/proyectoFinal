@@ -1,5 +1,5 @@
 <?php
-require 'BD/ConectorBD.php';
+require 'ConectorBD.php';
 
 $conexion=conectar(false);
 ?>

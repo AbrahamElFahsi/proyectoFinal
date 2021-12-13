@@ -1,5 +1,5 @@
 <?php
-require 'BD/ConectorBD.php';
+require 'ConectorBD.php';
 require 'BD/DAOUsuario.php';
 $conexion=conectar(false);
    //Voy a recoger los datos del formulario
@@ -29,10 +29,7 @@ $conexion=conectar(false);
            crearSesion($fila);
            header('Location: recuperar_pass.php');
        }else{
-           echo "<p> El usuario no existe </p>";
-           $url ="ingresar_usuario.php";
-           $texto= "Ingresar usuario";
-           echo "<a href=$url>$texto</a>";
+
            header('Location: ingreso.php');
        }
        

@@ -1,5 +1,5 @@
 <?php
-require 'BD/ConectorBD.php';
+require 'ConectorBD.php';
 require 'BD/DAOUsuario.php';
 require 'BD/DAOProducto.php';
 $conexion=conectar(false);
