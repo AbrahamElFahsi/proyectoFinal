@@ -1,5 +1,5 @@
 <?php
-require 'BD/ConectorBD.PHP';
+require 'BD/ConectorBD.php';
 $conexion=conectar(false);
 $consulta="select * from usuario";
 $con=mysqli_query($conexion,$consulta);

@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
     <?php 
         include 'nav.php';
-        require 'BD/ConectorBD.PHP';
-        require 'BD/DAOUsuario.PHP'; 
+        require 'BD/ConectorBD.php';
+        require 'BD/DAOUsuario.php'; 
          
         $conexion=conectar(false)
     ?>

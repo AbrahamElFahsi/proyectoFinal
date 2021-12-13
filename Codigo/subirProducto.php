@@ -1,8 +1,8 @@
-<?php
-require 'BD/ConectorBD.PHP';
-require 'BD/DAOUsuario.PHP';
-require 'BD/DAOProducto.PHP';
-require 'BD/DAOSeccion.PHP';
+php<?php
+require 'BD/ConectorBD.php';
+require 'BD/DAOUsuario.php';
+require 'BD/DAOProducto.php';
+require 'BD/DAOSeccion.php';
 
 
 $conexion=conectar(false);

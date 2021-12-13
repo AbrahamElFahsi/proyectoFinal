@@ -1,6 +1,6 @@
 <?php
-require 'BD/ConectorBD.PHP';
-require 'BD/DAOUsuario.PHP';
+require 'BD/ConectorBD.php';
+require 'BD/DAOUsuario.php';
 $conexion=conectar(false);
    //Voy a recoger los datos del formulario
    $usuario = $_POST['usuario'];
