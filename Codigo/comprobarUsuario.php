@@ -12,6 +12,10 @@ $conexion=conectar(false);
    echo "Password: $password <br>";
    //Hacemos la consulta
    $existeUsuario = consultaLogin($conexion,$usuario,$password);
+   $fila = mysqli_fetch_assoc($existeUsuario);
+       foreach($fila as $atributo=>$valor){
+           echo $atributo." : ".$valor." <br>";
+       }
    //Hacemos la consulta del usuario para saber si no se acuerda de la contraseña
    //Comprobamos si existe el usuario
    $existeSoloUsuario=consultaUsuario($conexion, $usuario);
