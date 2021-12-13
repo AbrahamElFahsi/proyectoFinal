@@ -14,42 +14,19 @@ $conexion=conectar(false);
    //Hacemos la consulta del usuario para saber si no se acuerda de la contraseña
    //Comprobamos si existe el usuario
    $existeSoloUsuario=consultaUsuario($conexion, $usuario);
-   $fila = mysqli_fetch_assoc($existeUsuario);
-   foreach($fila as $atributo=>$valor){
-       echo $atributo." : ".$valor." <br>";
-   }
    if(mysqli_num_rows($existeUsuario)==1){
        $fila = mysqli_fetch_assoc($existeUsuario);
        foreach($fila as $atributo=>$valor){
            echo $atributo." : ".$valor." <br>";
        }
        crearSesion($fila);
-       echo "Mostramos los datos de la sesión<br>";
-       /*
-       //VOy a mostrar la sesion
-       foreach($_SESSION as $indice=>$valor){
-           echo $indice."=".$valor." <br>";
-       }
-       */
        header('Location: principal.php');
        
       
    }else{
        if(mysqli_num_rows($existeSoloUsuario)==1){
-           //echo "contraseña incorrecta";
            $fila = mysqli_fetch_assoc($existeSoloUsuario);
-           /*
-           foreach($fila as $atributo=>$valor){
-               echo $atributo." : ".$valor." <br>";
-           }
-           */
            crearSesion($fila);
-           $url ="recuperar_pass.php";
-           $texto= "recuperar la contraseña";
-           echo "<a href=$url>$texto</a><br>";
-           $url1 ="Login.html";
-           $texto1= "volver al login";
-           echo "<a href=$url1>$texto1</a>";
            header('Location: recuperar_pass.php');
        }else{
            echo "<p> El usuario no existe </p>";
