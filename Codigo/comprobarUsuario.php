@@ -15,8 +15,6 @@ $conexion=conectar(false);
    //Comprobamos si existe el usuario
    $existeSoloUsuario=consultaUsuario($conexion, $usuario);
    $fila = mysqli_fetch_assoc($existeUsuario);
-   foreach($fila as $atributo=>$valor){
-       echo $atributo." : ".$valor." <br>";
-   }
+  echo $fila['idUsuario'];
   
 ?>
