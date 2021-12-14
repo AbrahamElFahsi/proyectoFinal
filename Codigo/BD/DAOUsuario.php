@@ -1,6 +1,6 @@
 <?php
 function todosUsuarios($conexion){
-    $consulta = "Select * from Usuario";
+    $consulta = "Select * from usuario";
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
@@ -10,12 +10,12 @@ function UsuarioProductos($conexion,$id,$fecha){
     return $resultado;
 }
 function modificar($conexion,$usuario,$campo,$nuevo){
-    $consulta = "UPDATE usuario SET $campo = '$nuevo' WHERE `idUsuario` = $usuario";
+    $consulta = "UPDATE usuario SET `$campo` = '$nuevo' WHERE `idUsuario` = $usuario";
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
 function consultaLogin($conexion,$usuario,$password){
-    $consulta = "Select * from Usuario WHERE  usuario = '$usuario' AND password = '$password' ";
+    $consulta = "Select * from usuario WHERE  `usuario` = '$usuario' AND `password` = '$password' ";
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
@@ -25,12 +25,12 @@ function insertarUsuarioComple($conexion,$usuario, $password, $nombre, $apellido
     return $resultado;
 }
 function consultaUsuario($conexion,$usuario){
-    $consulta = "Select * from Usuario WHERE  usuario = '$usuario'";
+    $consulta = "Select * from usuario WHERE  usuario = '$usuario'";
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
 function consultaUsuarioId($conexion,$idusuario){
-    $consulta = "Select * from Usuario WHERE  idUsuario = '$idusuario'";
+    $consulta = "Select * from usuario WHERE  idUsuario = '$idusuario'";
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
