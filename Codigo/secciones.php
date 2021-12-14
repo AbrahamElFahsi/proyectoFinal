@@ -68,7 +68,7 @@ $conexion=conectar(false);
         while ($pro=mysqli_fetch_assoc($productos)) {
             ?>
 <div class="card col-md-3 tarjetas p-3 m-5" >
-    <div >
+    <div>
                     <img src="<?php echo $pro['proImagen'];?>" class="img-thumbnail card-img-top"  style="height:100%;">
                     </div>
                     <div class="card-body">

@@ -16,7 +16,7 @@
         //Contraseña del usuario
         $password = "debianDB";
         //Esquema de BD
-        $BD = "tienda";
+        $BD = "tiendacompraventa";
 
         //Realizamos la conexión de la BD con la función mysqli_connect()
         $conexion = mysqli_connect($servidor,$usuario,$password,$BD);

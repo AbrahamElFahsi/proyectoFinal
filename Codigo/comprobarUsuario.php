@@ -13,8 +13,14 @@ $conexion=conectar(false);
    //Hacemos la consulta
    //Hacemos la consulta del usuario para saber si no se acuerda de la contraseña
    //Comprobamos si existe el usuario
-   $existeSoloUsuario=consultaUsuario($conexion, $usuario);
-   if(mysqli_num_rows($existeUsuario)==1){
+   $consulta = "Select * from Usuario WHERE  usuario = '$usuario' AND password = '$password' ";
+    $resultado = mysqli_query($conexion,$consulta);
+   
+   $usu=mysqli_fetch_assoc($resultado);
+   echo $usu['nombre'];
+
+  
+  /* if(mysqli_num_rows($existeUsuario)==1){
        $fila = mysqli_fetch_assoc($existeUsuario);
        foreach($fila as $atributo=>$valor){
            echo $atributo." : ".$valor." <br>";
@@ -34,4 +40,5 @@ $conexion=conectar(false);
        }
        
    }
+   */
 ?>
