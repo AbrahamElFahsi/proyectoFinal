@@ -22,7 +22,7 @@ $conexion=conectar(false);
   
 
   
-  /* if(mysqli_num_rows($existeUsuario)==1){
+   if(mysqli_num_rows($existeUsuario)==1){
        $fila = mysqli_fetch_assoc($existeUsuario);
        foreach($fila as $atributo=>$valor){
            echo $atributo." : ".$valor." <br>";
@@ -42,5 +42,5 @@ $conexion=conectar(false);
        }
        
    }
-   */
+   
 ?>
