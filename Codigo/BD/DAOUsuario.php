@@ -18,7 +18,7 @@ function modificar($conexion,$usuario,$campo,$nuevo){
 }
 */
 function consultaLogin($conexion,$usuario,$password){
-    $consulta = "Select * from usuario WHERE  usuario = '$usuario' AND password = '$password' ";
+    $consulta = "Select * from usuario WHERE  `usuario` = '$usuario' AND `password` = '$password' ";
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
@@ -30,7 +30,7 @@ function insertarUsuarioComple($conexion,$usuario, $password, $nombre, $apellido
 }
 */
 function consultaUsuario($conexion,$usuario){
-    $consulta = "Select * from usuario WHERE  usuario = '$usuario'";
+    $consulta = "Select * from usuario WHERE  `usuario` = '$usuario'";
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }/*
