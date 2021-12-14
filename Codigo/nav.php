@@ -15,12 +15,12 @@ session_start();
           <a class="nav-link" href="secciones.php">Secciones</a>
         </li>
       </ul>
-      <ul class="nav navbar-nav">
+    
       <?php
           if(isset($_SESSION['usuario'])){
             if($_SESSION['Rol']=="admin"){
               ?>
-              <ul>
+              <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
@@ -36,7 +36,7 @@ session_start();
               <?php
             }else if($_SESSION['Rol']=="usuario"){
               ?>
-<ul>
+<ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
