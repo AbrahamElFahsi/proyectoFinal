@@ -20,40 +20,29 @@ session_start();
           if(isset($_SESSION['usuario'])){
             if($_SESSION['Rol']=="admin"){
               ?>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                  <?php echo  "Bienvenido ".$_SESSION['usuario']; ?>
-                </a>
-                <div class="dropdown-menu">
-                  <li><a class="dropdown-item" href="mostrarProductosComprar.php">Cesta</a></li>
-                  <li><a class="dropdown-item" href="subirProducto.php">Subir producto</a></li>
-                  <li><a class="dropdown-item" href="mostrarProductosVenta.php">mostrarProductosVenta</a></li>
-                  <li><a class="dropdown-item" href="adminUsuario.php">Panel usuario</a></li>
-                  <li><a class="dropdown-item" href="adminProducto.php">Panel productos</a></li>
-                  <li><a class="dropdown-item" href="adminSeccion.php">Panel Seccion</a></li>
-                  <li><a class="dropdown-item" href="adminComentario.php">Panel Comentarios</a></li>
-                  <li><a class="dropdown-item" href="cerrarSesion.php">Cerrar Usuario</a></li>
-                  <li><a class="dropdown-item" href="eliminarUsuario.php">Eliminar Usuario</a></li>
-                </ul>
-              </div>
+            <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </li>
               <?php
             }else if($_SESSION['Rol']=="usuario"){
               ?>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                  <?php echo  "Bienvenido ".$_SESSION['usuario']; ?>
-                </a>
-                <div class="dropdown-menu">
-                  <li><a class="dropdown-item" href="mostrarProductosComprar.php">Cesta</a></li>
-                  <li><a class="dropdown-item" href="subirProducto.php">Subir producto</a></li>
-                  <li><a class="dropdown-item" href="modificarUsuario.php">Modificar usuario</a></li>
-                  <li><a class="dropdown-item" href="mostrarProductosVenta.php">mostrarProductosVenta</a></li>
-                  <li><a class="dropdown-item" href="eliminarUsuario.php">Eliminar Usuario</a></li>
-                  <li><a class="dropdown-item" href="cerrarSesion.php">Cerrar Usuario</a></li>
-                  <li><a class="dropdown-item" href="eliminarUsuario.php">Eliminar Usuario</a></li>
-               </div>
-              </li>
-              
+            <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </li>
               <?php
             }
        
