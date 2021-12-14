@@ -15,7 +15,7 @@ $conexion=conectar(false);
    $resultado1 = mysqli_query($conexion,$consulta1);
   
  $usu1=mysqli_fetch_assoc($resultado1);
-   echo $usu1['nombre']."".$usu['password'];
+   echo $usu1['nombre']."".$usu1['password'];
    //Hacemos la consulta del usuario para saber si no se acuerda de la contraseña
    //Comprobamos si existe el usuario
    $consulta = "Select * from usuario where usuario='$usuario'";
@@ -25,10 +25,10 @@ $conexion=conectar(false);
     echo $usu['nombre']."".$usu['password'];
   
   
-/*
+
   
-   if(mysqli_num_rows($existeUsuario)==1){
-       $fila = mysqli_fetch_assoc($existeUsuario);
+   if(mysqli_num_rows($resultado1)==1){
+       $fila = mysqli_fetch_assoc($resultado1);
        foreach($fila as $atributo=>$valor){
            echo $atributo." : ".$valor." <br>";
        }
@@ -38,7 +38,7 @@ $conexion=conectar(false);
       
    }else{
        if(mysqli_num_rows($resultado)==1){
-           $fila = mysqli_fetch_assoc($existeSoloUsuario);
+           $fila = mysqli_fetch_assoc($resultado);
            crearSesion($fila);
            header('Location: recuperar_pass.php');
        }else{
@@ -47,5 +47,5 @@ $conexion=conectar(false);
        }
        
    }
-   */
+   
 ?>
