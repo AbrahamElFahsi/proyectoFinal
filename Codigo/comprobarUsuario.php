@@ -29,9 +29,6 @@ $conexion=conectar(false);
   
    if(mysqli_num_rows($resultado1)==1){
        $fila = mysqli_fetch_assoc($resultado1);
-       foreach($fila as $atributo=>$valor){
-           echo $atributo." : ".$valor." <br>";
-       }
        crearSesion($fila);
        header('Location: principal.php');
        
