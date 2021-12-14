@@ -19,9 +19,9 @@ $conexion=conectar(false);
        foreach($fila as $atributo=>$valor){
            echo $atributo." : ".$valor." <br>";
        }
-       crearSesion($fila);
-       header('Location: principal.php');
        
+       header('Location: principal.php');
+       crearSesion($fila);
       
    }else{
        if(mysqli_num_rows($existeSoloUsuario)==1){
