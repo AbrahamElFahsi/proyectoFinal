@@ -10,7 +10,7 @@ function UsuarioProductos($conexion,$id,$fecha){
     return $resultado;
 }
 function modificar($conexion,$usuario,$campo,$nuevo){
-    $consulta = "UPDATE usuario SET $campo = '$nuevo' WHERE `idUsuario` = $usuario";
+    $consulta = "UPDATE usuario SET $campo = '$nuevo' WHERE idUsuario = $usuario";
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
@@ -20,7 +20,7 @@ function consultaLogin($conexion,$usuario,$password){
     return $resultado;
 }
 function insertarUsuarioComple($conexion,$usuario, $password, $nombre, $apellidos, $dni, $comunidad, $provincia, $cp, $direccion, $Rol, $telefono, $email){
-    $consulta = "INSERT INTO usuario (usuario, password, nombre, apellidos, dni, comunidad, provincia, cp, direccion, Rol, telefono, email) VALUES ('$usuario', '$password', '$nombre', '$apellidos', '$dni', '$comunidad', '$provincia', '$cp', '$direccion', '$Rol', '$telefono', '$email') ";
+    $consulta = "INSERT INTO usuario (`usuario`, `password`, `nombre`, `apellidos`, `dni`, `comunidad`, `provincia`, `cp`, `direccion`, `Rol`, `telefono`, `email`) VALUES ('$usuario', '$password', '$nombre', '$apellidos', '$dni', '$comunidad', '$provincia', '$cp', '$direccion', '$Rol', '$telefono', '$email') ";
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
