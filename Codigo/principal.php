@@ -5,8 +5,6 @@ require 'BD/DAOProducto.php';
 require 'BD/DAOSeccion.php';
 require 'BD/DAOComentario.php';
 $conexion=conectar(false);
-session_start();
-echo $_SESSION['nombre'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
