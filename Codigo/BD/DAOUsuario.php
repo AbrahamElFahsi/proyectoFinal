@@ -58,7 +58,7 @@ function crearUsuarioAdmin($conexion,$telefono,$email,$usuario,$contra,$nombre,$
 }
 function crearSesion($usuario){
     //Queremos que el id de session sea su dni
-    session_id($usuario['Usuario']);
+    session_id($usuario['usuario']);
     //Creamos la session
     session_start();
     //Almacenamos en la session los datos del usuario
@@ -66,9 +66,5 @@ function crearSesion($usuario){
         $_SESSION[$indice] = $valor;
     }
 }
-function insertarUsuario($conexion,$usuario,$password,$nombre,$apellidos,$dni){
-    $consulta = "insert into usuario (usuario,password,nombre,apellidos,dni) values ($usuario,$password,$nombre,$apellidos,$dni)";
-    $resultado = mysqli_query($conexion,$consulta);
-    return $resultado;
-}
+
 ?>
