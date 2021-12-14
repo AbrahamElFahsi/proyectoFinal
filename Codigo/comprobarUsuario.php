@@ -1,6 +1,16 @@
 <?php
 require 'ConectorBD.php';
-require 'BD/DAOUsuario.php';
+function crearSesion($usuario){
+    //Queremos que el id de session sea su dni
+    session_id($usuario['usuario']);
+    //Creamos la session
+    session_start();
+    //Almacenamos en la session los datos del usuario
+    foreach($usuario as $indice=>$valor){
+        $_SESSION[$indice] = $valor;
+    }
+}
+
 $conexion=conectar(false);
    //Voy a recoger los datos del formulario
    $usuario = $_POST['usuario'];
