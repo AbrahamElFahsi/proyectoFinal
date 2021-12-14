@@ -21,7 +21,7 @@ session_start();
             if($_SESSION['Rol']=="admin"){
               ?>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                   <?php echo  "Bienvenido ".$_SESSION['usuario']; ?>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
@@ -41,7 +41,7 @@ session_start();
             }else if($_SESSION['Rol']=="usuario"){
               ?>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                   <?php echo  "Bienvenido ".$_SESSION['usuario']; ?>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
