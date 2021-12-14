@@ -51,11 +51,7 @@ function eliminarUsuario($conexion,$usuario){
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
-function crearUsuarioAdmin($conexion,$telefono,$email,$usuario,$contra,$nombre,$apellidos,$dni,$comunidad,$provincia,$cp,$direccion,$rol){
-    $consulta = "INSERT INTO usuario (usuario, telefono, email, password, nombre, apellidos, dni, comunidad, provincia, cp, direccion, Rol) VALUES ('$usuario','$telefono','$email','$contra','$nombre','$apellidos','$dni','$comunidad','$provincia','$cp','$direccion','$rol');";
-    $resultado = mysqli_query($conexion,$consulta);
-    return $resultado;
-}
+
 function crearSesion($usuario){
     //Queremos que el id de session sea su dni
     session_id($usuario['usuario']);
