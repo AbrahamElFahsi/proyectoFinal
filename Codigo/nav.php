@@ -21,10 +21,10 @@ session_start();
             if($_SESSION['Rol']=="admin"){
               ?>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                   <?php echo  "Bienvenido ".$_SESSION['usuario']; ?>
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <div class="dropdown-menu">
                   <li><a class="dropdown-item" href="mostrarProductosComprar.php">Cesta</a></li>
                   <li><a class="dropdown-item" href="subirProducto.php">Subir producto</a></li>
                   <li><a class="dropdown-item" href="mostrarProductosVenta.php">mostrarProductosVenta</a></li>
@@ -33,27 +33,25 @@ session_start();
                   <li><a class="dropdown-item" href="adminSeccion.php">Panel Seccion</a></li>
                   <li><a class="dropdown-item" href="adminComentario.php">Panel Comentarios</a></li>
                   <li><a class="dropdown-item" href="cerrarSesion.php">Cerrar Usuario</a></li>
-                  <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="eliminarUsuario.php">Eliminar Usuario</a></li>
                 </ul>
-              </li>
+              </div>
               <?php
             }else if($_SESSION['Rol']=="usuario"){
               ?>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                   <?php echo  "Bienvenido ".$_SESSION['usuario']; ?>
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <div class="dropdown-menu">
                   <li><a class="dropdown-item" href="mostrarProductosComprar.php">Cesta</a></li>
                   <li><a class="dropdown-item" href="subirProducto.php">Subir producto</a></li>
                   <li><a class="dropdown-item" href="modificarUsuario.php">Modificar usuario</a></li>
                   <li><a class="dropdown-item" href="mostrarProductosVenta.php">mostrarProductosVenta</a></li>
                   <li><a class="dropdown-item" href="eliminarUsuario.php">Eliminar Usuario</a></li>
                   <li><a class="dropdown-item" href="cerrarSesion.php">Cerrar Usuario</a></li>
-                  <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="eliminarUsuario.php">Eliminar Usuario</a></li>
-                </ul>
+               </div>
               </li>
               
               <?php
