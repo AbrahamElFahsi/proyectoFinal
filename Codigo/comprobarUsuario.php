@@ -18,7 +18,7 @@ $conexion=conectar(false);
     $resultado = mysqli_query($conexion,$consulta);
    
   $usu=mysqli_fetch_assoc($resultado);
-    echo $usu['nombre']."".$usu['nombre'];
+    echo $usu['nombre']."".$usu['password'];
   
   
 /*
