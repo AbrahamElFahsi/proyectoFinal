@@ -20,6 +20,7 @@ session_start();
           if(isset($_SESSION['usuario'])){
             if($_SESSION['Rol']=="admin"){
               ?>
+              <ul>
             <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
@@ -31,9 +32,11 @@ session_start();
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
+            </ul>
               <?php
             }else if($_SESSION['Rol']=="usuario"){
               ?>
+<ul>
             <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
@@ -45,6 +48,7 @@ session_start();
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
+      </ul>
               <?php
             }
        
