@@ -32,9 +32,9 @@ $conexion=conectar(false);
        foreach($fila as $atributo=>$valor){
            echo $atributo." : ".$valor." <br>";
        }
-       
-       header('Location: principal.php');
        crearSesion($fila);
+       header('Location: principal.php');
+       
       
    }else{
        if(mysqli_num_rows($resultado)==1){
