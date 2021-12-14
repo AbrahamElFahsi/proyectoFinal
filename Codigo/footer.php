@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <link rel="stylesheet" href="css/style.css">
 <footer id="footer" style="margin-top: 170px; position: relative; bottom: 0;">
       <div style="padding: 20px 0;  background: #252525;" >
