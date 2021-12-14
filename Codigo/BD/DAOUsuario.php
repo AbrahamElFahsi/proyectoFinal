@@ -10,12 +10,12 @@ function UsuarioProductos($conexion,$id,$fecha){
     return $resultado;
 }
 function modificar($conexion,$usuario,$campo,$nuevo){
-    $consulta = "UPDATE usuario SET `$campo` = '$nuevo' WHERE `idUsuario` = $usuario";
+    $consulta = "UPDATE usuario SET $campo = '$nuevo' WHERE `idUsuario` = $usuario";
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
 function consultaLogin($conexion,$usuario,$password){
-    $consulta = "Select * from usuario WHERE  `usuario` = '$usuario' AND `password` = '$password' ";
+    $consulta = "Select * from usuario WHERE  usuario = '$usuario' AND password = '$password' ";
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
@@ -51,7 +51,11 @@ function eliminarUsuario($conexion,$usuario){
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
-
+function crearUsuarioAdmin($conexion,$telefono,$email,$usuario,$contra,$nombre,$apellidos,$dni,$comunidad,$provincia,$cp,$direccion,$rol){
+    $consulta = "INSERT INTO usuario (usuario, telefono, email, password, nombre, apellidos, dni, comunidad, provincia, cp, direccion, Rol) VALUES ('$usuario','$telefono','$email','$contra','$nombre','$apellidos','$dni','$comunidad','$provincia','$cp','$direccion','$rol');";
+    $resultado = mysqli_query($conexion,$consulta);
+    return $resultado;
+}
 function crearSesion($usuario){
     //Queremos que el id de session sea su dni
     session_id($usuario['usuario']);
