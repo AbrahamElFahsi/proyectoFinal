@@ -13,11 +13,13 @@ $conexion=conectar(false);
    //Hacemos la consulta
    //Hacemos la consulta del usuario para saber si no se acuerda de la contraseña
    //Comprobamos si existe el usuario
-   $consulta = "Select * from Usuario WHERE  usuario = '$usuario' AND password = '$password' ";
+   $consulta = "Select * from usuario";
     $resultado = mysqli_query($conexion,$consulta);
    
-   $usu=mysqli_fetch_assoc($resultado);
-   echo $usu['nombre'];
+  while ($usu=mysqli_fetch_assoc($resultado)) {
+    echo $usu['nombre'];
+  } 
+  
 
   
   /* if(mysqli_num_rows($existeUsuario)==1){

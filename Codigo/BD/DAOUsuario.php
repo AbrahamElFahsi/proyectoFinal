@@ -9,6 +9,7 @@ function UsuarioProductos($conexion,$id,$fecha){
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
+/*
 function modificar($conexion,$usuario,$campo,$nuevo){
     $consulta = "UPDATE usuario SET $campo = '$nuevo' WHERE idUsuario = $usuario";
     $resultado = mysqli_query($conexion,$consulta);
@@ -66,5 +67,5 @@ function crearSesion($usuario){
         $_SESSION[$indice] = $valor;
     }
 }
-
+*/
 ?>
