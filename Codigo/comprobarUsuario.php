@@ -24,7 +24,7 @@ $conexion=conectar(false);
    $consulta1 = "Select * from usuario where usuario='$usuario' AND password='$password'";
    $resultado1 = mysqli_query($conexion,$consulta1);
   
- $usu1=mysqli_fetch_assoc($resultado1);
+
    //Hacemos la consulta del usuario para saber si no se acuerda de la contraseña
    //Comprobamos si existe el usuario
   
