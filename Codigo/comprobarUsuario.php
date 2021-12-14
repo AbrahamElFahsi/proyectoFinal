@@ -20,7 +20,7 @@ $conexion=conectar(false);
     echo $usu['nombre'];
   
   
-
+/*
   
    if(mysqli_num_rows($existeUsuario)==1){
        $fila = mysqli_fetch_assoc($existeUsuario);
@@ -42,5 +42,5 @@ $conexion=conectar(false);
        }
        
    }
-   
+   */
 ?>
