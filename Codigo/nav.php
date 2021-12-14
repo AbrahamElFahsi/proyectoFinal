@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -21,7 +19,7 @@ session_start();
             if($_SESSION['Rol']=="admin"){
               ?>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="cerrarSesion.php" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                   <?php echo  "Bienvenido ".$_SESSION['usuario']; ?>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
@@ -34,14 +32,14 @@ session_start();
                   <li><a class="dropdown-item" href="adminComentario.php">Panel Comentarios</a></li>
                   <li><a class="dropdown-item" href="cerrarSesion.php">Cerrar Usuario</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Eliminar Usuario</a></li>
+                  <li><a class="dropdown-item" href="eliminarUsuario.php">Eliminar Usuario</a></li>
                 </ul>
               </li>
               <?php
             }else if($_SESSION['Rol']=="usuario"){
               ?>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="cerrarSesion.php" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                   <?php echo  "Bienvenido ".$_SESSION['usuario']; ?>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
@@ -52,7 +50,7 @@ session_start();
                   <li><a class="dropdown-item" href="eliminarUsuario.php">Eliminar Usuario</a></li>
                   <li><a class="dropdown-item" href="cerrarSesion.php">Cerrar Usuario</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Eliminar Usuario</a></li>
+                  <li><a class="dropdown-item" href="eliminarUsuario.php">Eliminar Usuario</a></li>
                 </ul>
               </li>
               
