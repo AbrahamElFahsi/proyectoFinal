@@ -16,21 +16,24 @@ function modificar($conexion,$usuario,$campo,$nuevo){
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
+*/
 function consultaLogin($conexion,$usuario,$password){
     $consulta = "Select * from usuario WHERE  usuario = '$usuario' AND password = '$password' ";
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
+/*
 function insertarUsuarioComple($conexion,$usuario, $password, $nombre, $apellidos, $dni, $comunidad, $provincia, $cp, $direccion, $Rol, $telefono, $email){
     $consulta = "INSERT INTO usuario (`usuario`, `password`, `nombre`, `apellidos`, `dni`, `comunidad`, `provincia`, `cp`, `direccion`, `Rol`, `telefono`, `email`) VALUES ('$usuario', '$password', '$nombre', '$apellidos', '$dni', '$comunidad', '$provincia', '$cp', '$direccion', '$Rol', '$telefono', '$email') ";
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
+*/
 function consultaUsuario($conexion,$usuario){
     $consulta = "Select * from usuario WHERE  usuario = '$usuario'";
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
-}
+}/*
 function consultaUsuarioId($conexion,$idusuario){
     $consulta = "Select * from usuario WHERE  idUsuario = '$idusuario'";
     $resultado = mysqli_query($conexion,$consulta);
