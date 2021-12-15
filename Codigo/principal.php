@@ -1,6 +1,6 @@
 <?php
 require 'ConectorBD.php';
-require 'BD/DAOUsuario.php';
+
 require 'BD/DAOProducto.php';
 require 'BD/DAOSeccion.php';
 require 'BD/DAOComentario.php';
